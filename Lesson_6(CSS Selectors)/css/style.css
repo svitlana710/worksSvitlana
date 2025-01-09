@@ -1,0 +1,204 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--main-font-size);
+}
+
+.container {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+}
+
+.menu__link:hover {
+    color: #070707;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #828282;
+}
+
+.title_1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.wrapper-img {
+    width: 100%;
+    height: 388px;
+}
+
+.img {
+    width: 100%;
+}
+
+.about-me,#portfolio {
+    padding: 100px 0;
+    text-align: center;
+    background: #F6F6F6;
+}
+
+.title_2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.text {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+#skills,#portfolio,#contacts {
+    margin: 20px;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+#skills,#portfolio,#contacts h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+#skills,#portfolio,#contacts p {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px; 
+    flex-wrap: nowrap; 
+    white-space: nowrap;
+}
+
+.icon_container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    margin: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 7px; 
+    margin-top: 70px; 
+}
+
+
+.star {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+}
+
+.star[alt="Star black"] {
+    background: url('./img/icons/starB.jpg') no-repeat center center;
+}
+
+.star[alt="Star empty"] {
+    background: url('./img/icons/starW.jpg') no-repeat center center;
+}
+
+.icon[ alt="Figma"]{
+    width: 53.33px;
+    height: 80px;
+    margin-top: 10px;
+}
+.portfolioIMG{
+    width: 970px;
+    height: 540px;
+    gap: 50px;
+    padding: 50px 0;
+}
+.contactsIMG[alt="button"]{
+    width: 180px;
+    height: 44px;
+}
+
+.contacts-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.contacts-link:hover{
+    opacity: .5;
+    width: 200px;
+cursor: pointer;
+transition: all .1s ease-in;
+}
+.contactsIMG:hover{
+    width: 50px;
+    height: auto;
+    transition: all .1s ease-in;
+}
+.icon-wrapper {
+    display: inline-block;
+    justify-content: center; 
+    gap: 20px; 
+}
+.icon-wrapper a img {
+    width: 40px; 
+    height: 40px; 
+}
+
+
+.p-gray{
+   color: #828282 ; 
+   font-size: 14px;
+}
+.stars_1{
+    margin-top: 90px;
+    
+}
+p.text:not(:nth-of-type(2n)){
+    border-bottom: 1px solid #000;
+}
+section:nth-child(2){
+    color: red;
+}
+section#portfolio ~ div.container > p:nth-of-type(3){
+    background: burlywood;
+}
