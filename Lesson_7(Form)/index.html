@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesosn_5 Figma</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container flex-block">
+                <!-- <div class=""> -->
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#about_me" class="menu__link">About me</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#skills" class="menu__link">Skills</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#portfolio" class="menu__link">Portfolio</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#contacts" class="menu__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="buttons">
+                    <button class="buttons_btn">Sign In</button>
+                    <button class="buttons_btn">Sign Up</button>
+                </div>
+            <!-- </div> -->
+            </div>
+        </header>
+        <main class="main">
+            <section>
+                <div class="container">
+                    <form method="GET" class="form">
+                        <div>
+                            <label for="name">Your name</label>
+                            <input type="name" required id="name">
+                        </div>
+                        <div>
+                            <label for="email">Your email</label>
+                            <input type="email" required id="email">
+                        </div>
+                        <div>
+                            <label for="password">Your password</label>
+                            <input type="password" required id="password">
+                        </div>
+                        <div>
+                            <label for="password-again">Your password again</label>
+                            <input type="password" required id="password-again">
+                        </div>
+                        <div>
+                           <h3>Your orientation</h3>
+                            <label>
+                            <input type="radio" name="framework" value="Man" id="man">
+                             Man
+                            </label>
+                            <label>
+                            <input type="radio" name="framework" value="Woman" id="woman">
+                            Woman
+                        </label>
+                            <label>
+                                <input type="radio" name="framework" value="Other" id="orientation">
+                                Other
+                            </label>
+                        </div>
+                        <div>
+                            <h3>Your Age</h3>
+                            <input type="number" required id="age">
+                        </div>
+                        <div>
+                            <h3>Курс</h3>
+                            <select name="country">
+                                <option selected disabled>Виберіть курс</option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JS</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h3>Повна адреса</h3>
+                            <textarea cols="20" rows="10" placeholder="Країна, регіон, місто/селище, вулиця, будинок,  квартира" name="textarea" id="adress"></textarea>
+                        </div>
+                        <div>
+                            
+                            <label for="true">
+                                <input type="checkbox" id="true">
+                                Я погоджуюсь з обробкою персональних даних
+                            </label>
+                        </div>
+                        <div>
+                            <button type="reset">
+                                Reset
+                            </button>
+                            <button type="submit">
+                                Submit
+                            </button>
+                        </div>
+                        
+                    </form>
+            </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+            <section id="contacts">
+                <h2>Contacts</h2>
+        </section>
+    </div>
+        </footer>
+    </body>
+</html>
