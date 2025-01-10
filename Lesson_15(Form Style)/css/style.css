@@ -1,0 +1,201 @@
+@import url(./fonts.css);
+body {
+    background-color: #F7F7F7;
+    font-family: 'Roboto' ;
+}
+
+.main {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 570px;
+    height: 595px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px; 
+}
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input_1,.input_2{
+    border: solid #e7e7e7 1px;
+    border-radius: 5px;
+}
+.input_1{
+    width: 245px;
+    height: 38px;
+    background: url(../assets/img/Arrow\ #3\ Double.svg) no-repeat right;
+    background-position: calc(100% - 10px) center;
+}
+.input_2{
+    width: 517px;
+    height: 38px;
+}
+
+label{
+    color: #545454;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+h1{
+    font-size: 24px;
+    color: #1C1C1C;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+.text{
+    font-size: 13px;
+    color: #969696;
+}
+.row-gender{
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.btn-sign{
+    width: 517px;
+    height: 38px;
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px
+}
+.btn:hover,.btn-sign:hover,.btn-del:hover{
+    cursor: pointer;
+    border: #1C1C1C 3px solid;
+    transition: all 0.3s;
+}
+a{
+    color: #007BFF;
+    text-decoration: none;
+}
+.text-area{
+    width: 390px;
+    height: 60px;
+    text-align: center;
+    border-bottom: solid 1px #E4E4E4;
+}
+.text-log{
+    font-size: 15px;
+    margin: 0;
+}
+.input_1:hover,.input_2:hover{
+    border: #007BFF solid 1px;
+    transition: all 0.3s;
+}
+.gender__check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #ffffffe0;
+    margin-right: 30px;
+}
+.gender__check::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 5px  #007BFF inset;
+    opacity: 0.1;
+    transition: all 0.3s;
+}
+input[type="radio"] {
+    opacity: 0;
+}
+input[type="radio"]:checked ~ span::after {
+    opacity: 1;
+}
+.btn{
+    width: 150px;
+    height: 38px;
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 25px;
+}
+
+.photo-block {
+    width: 275px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: 20px;
+    position: relative;
+}
+
+.input-photo {
+    width: 50px;
+    height: 30px;
+    border: solid #e7e7e7 1px;
+    border-radius: 5px;
+    padding: 5px; 
+    opacity: 0;
+    position: absolute;
+}
+
+.input-photo_label {
+    width: 138px;
+    height: 30px;
+    border: solid #e7e7e7 1px;
+    border-radius: 5px;
+    background: url(../assets/img/Photo\ Camera.svg) no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+
+.textA {
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    font-size: 13px;
+    color: #969696;
+    margin-left: 90px;
+    margin-top: 70px;
+}
+
+.btn-del{
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: solid #e7e7e7 1px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-del:hover,.input-photo_label:hover{
+    cursor:pointer;
+    border: #007BFF solid 1px;
+    transition: all 0.3s;
+}
+.arrow{
+    background: url(../assets/img/Arrow\ #3\ Double.svg) no-repeat right;
+    background-position: calc(100% - 10px) center;
+}

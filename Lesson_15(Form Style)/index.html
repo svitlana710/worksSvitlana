@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Style</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main class="main">
+    <div class="container">
+        <h1 class="title">Create an Account</h1>
+        <form class="form-container">
+            <div class="row">
+                <div class="input-group">
+                    <label for="FName">First Name</label>
+                    <input type="text" required id="FName" class="input_1">
+                </div>
+                <div class="input-group">
+                    <label for="LName">Last Name</label>
+                    <input type="text" required id="LName" class="input_1">
+                </div>
+            </div>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" required id="email" class="input_2">
+                    <p class="text">We'll never share your email with anyone else.</p>
+                </div>  
+                <div class="row-gender">
+                <label>          
+                    <input type="radio" name="framework" value="Man" id="man">
+                    <span class="gender__check"></span> Male
+                </label>
+                <label>
+                    <input type="radio" name="framework" value="Woman" id="woman">
+                    <span class="gender__check"></span>  Female                  
+                </label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                    <label for="country">Country</label> 
+                    <input type="country" required id="country" placeholder="Select" class="input_1 arrow">
+                    </div>
+                    <div class="input-group">
+                        <label for="city">City</label>
+                        <input type="text" required id="city" class="input_1">
+                    </div>
+                </div>
+                <button type="submit" class="btn-sign">Sign Up</button>
+                <p class="text text-area">By clicking the 'Sign Up' button, you confirm that you accept our 
+                 <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>                   
+ </p>
+<div class="row row-log">
+    <p class="text text-log">Have an account? <a href="">Log In</a></p>
+</div>
+</form>
+        </div>
+        <div class="container">
+            <h1>Profile</h1>
+            <form class="form-container">
+                <div class="photo-block">
+                    <img src="./assets/img/Image.png" id="img1">
+                    <label for="file-input" class="input-photo_label"></label>
+                    <input type="file" id="file-input" class="input-photo">
+                   <p class="textA">Up to 1 MB (300x300 px)</p> 
+                 <button type="reset" class="btn-del"><img src="./assets/img/Trash.svg" alt=""></button>
+                </div>               
+                <div class="row">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="name" required id="name" class="input_1">
+                    </div>
+                    <div class="input-group">
+                        <label for="gmail">E-mail</label>
+                        <input type="text" required id="gmail" class="input_1" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                    <label for="country">Country</label> 
+                    <input type="country" required id="country" placeholder="Select" class="input_1 arrow">
+                    </div>
+                    <div class="input-group">
+                        <label for="city">City</label>
+                        <input type="text" required id="city" class="input_1">
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="input-group">
+                    <label for="zip-code">ZIP Code</label>
+                    <input type="number" required id="zip-code" class="input_1" >
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" id="phone" class="input_1">
+                </div>
+                </div>
+                <button class="btn">Update</button>
+            </form>
+        </div>
+</main>
+</body>
+</html>
