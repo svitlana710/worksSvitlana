@@ -1,0 +1,211 @@
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import url(../css/normalize.css);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    height: 100vh;
+    background: #fff;
+    font-size: 16px;
+  }
+  .flex-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    &__main{
+      margin: 0 auto;
+      width: 1170px;
+      height: 611px;
+    }
+  }
+  .header {
+    padding: 23px 0;
+    border-bottom: 1px solid #EFEEF3;
+    &__title{
+      margin: 0;
+      font-size: 35px;
+      font-family: 'Quicksand', sans-serif;
+    }
+  }
+  .span-content{
+    color: #7690A8;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+  }
+  .content__main{
+    margin: 0 auto;
+  }
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+  height: 461px;
+  gap: 30px;
+  margin: 0 auto;
+
+  &__title{
+    font-size: 40px;
+    margin: 0;
+    margin-top: 50px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  &__block{
+    width: 370px;
+    height: 340px;
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+    font-family: "Roboto",sans-serif;
+
+    &:hover {
+      border: 1px solid #3DB370;
+      cursor: pointer;
+      transition: all .1s ease-in;
+      
+      & #megaphone{
+        background: url(../assets/img/svg/megaphone-green.svg) no-repeat center;
+        transition: all .1s ease-in;
+      }
+
+      & #building{
+        background: url(../assets/img/svg/building-green.svg) no-repeat center;
+        transition: all .1s ease-in;
+      }
+
+      & #phone{
+        background: url(../assets/img/svg/phone-green.svg) no-repeat center;
+        transition: all .1s ease-in;
+      }
+    }
+
+    &-svg{
+      border: 1px solid #1565D81A;
+      border-radius: 16px;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+  }
+}
+#megaphone,#building,#phone{
+  border: 1px solid #1565D81A;
+      border-radius: 16px;
+      width: 64px;
+      height: 64px;
+      margin-top: 30px;
+      margin-left: 30px;
+}
+#megaphone{
+  background: url(../assets/img/svg/megaphone-blue.svg) no-repeat center;
+}
+
+#building{
+  background: url(../assets/img/svg/building-blue.svg) no-repeat center;
+}
+
+#phone{
+  background: url(../assets/img/svg/phone-blue.svg) no-repeat center;
+}
+
+.title_4{
+  font-size: 24px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.text{
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 320px;
+}
+.link{
+  font-size: 16px;
+  color: #3DB370;
+  text-decoration: none;
+  margin-left: 30px;
+  
+}
+  .svg-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  
+  .img-svg {
+    width: 100px;
+  }
+  
+  .icon .layer_1 {
+    fill: red;
+  }
+  .icon .layer_2 {
+    fill: yellow;
+  }
+  .icon:hover .layer_1 {
+    fill: yellow;
+  }
+  .icon:hover .layer_2 {
+    fill: black;
+  }
+  .icon:hover .layer_3 {
+    fill: #484de0;
+  }
+  .footer {
+    background: #16133D;
+    &__title{
+      font-size: 35px;
+      color: #FFFFFF;
+      margin-left: 20px;
+      font-family: "Quicksand", sans-serif;
+
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin-right: 20px;
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 38px;
+      width: 38px;
+      background: #EFEEF3;
+      border-radius: 5px;
+
+
+      &:hover .social__icon {
+        fill: #3DB370;
+      }
+    }
+
+    &__icon{
+      fill: #000000;
+      &:hover{
+        fill: #3DB370;
+      }
+
+
+    
+    }
+  }
+   
