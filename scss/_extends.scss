@@ -1,0 +1,24 @@
+%container__slide{
+    width: 538.4px;
+    height: 560px;
+    display: flex;
+    align-items: center;
+}
+%font__roboto{
+    font-family: 'Roboto', sans-serif;
+}
+%font__raleway{
+    font-family: 'Raleway', sans-serif;
+}
+%img-tb{
+    width: 230px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+}
+%img-lr{
+    width: 10px;
+    height: 230px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+}
