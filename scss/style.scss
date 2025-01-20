@@ -1,0 +1,212 @@
+@import 'extends';
+@import 'fonts';
+@import 'mixins';
+@import 'vars';
+@import 'media';
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+ul,
+ol,
+dl {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: $font_size_main;
+}
+
+body {
+  color: $font_color_main;
+  min-height: 100vh;
+}
+
+// Основні контейнери
+.header,
+.banner,
+.blog,
+.posts,
+.footer {
+  @include container-padding;
+}
+
+// Секція хедеру
+.header {
+  @include flexbox(space-between, center);
+  gap: 1.8vw;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.nav {
+  @include flexbox(flex-end);
+  flex-grow: 1;
+}
+
+.menu {
+  @include flexbox;
+  gap: 2.3vw;
+  padding: 0 30px;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $font_color_title;
+    font-size: 0.875rem;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: -14px;
+      transform: translateX(10%);
+      width: 0;
+      height: 1px;
+      opacity: 0;
+      background: #000;
+      transition: all 0.55s;
+    }
+
+    &:hover::after {
+      left: 0;
+      transform: translateX(12%);
+      width: 76%;
+      opacity: 1;
+    }
+  }
+}
+
+// Секція банеру
+.banner {
+  background: url('../assets/img/bg-image.png') no-repeat;
+  background-size: cover;
+  min-height: calc(85vh - 100px);
+  padding-top: 100px;
+
+  &__title {
+    @extend %base-title;
+    font-size: 3rem;
+    line-height: 1.33;
+    max-width: 770px;
+    letter-spacing: 0.05rem;
+  }
+}
+
+// Секція блогу
+.blog {
+  margin-top: 70px;
+
+  &-article {
+    @include flexbox(flex-start, center);
+
+    &:nth-child(3) {
+      margin-top: 40px;
+      justify-content: flex-end;
+    }
+
+    &__title {
+      @extend %base-title;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 38px;
+      width: 369px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &-title {
+    @extend %base-title;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  &-subtitle {
+    @extend %base-subtitle;
+    font-size: 16px;
+  }
+
+  &-text {
+    margin-left: 30px;
+  }
+
+  &-paragraph {
+    color: #565656;
+    width: 448px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    margin-bottom: 20px;
+  }
+}
+
+// Секція постів
+.posts {
+  margin-top: 50px;
+
+  &__title {
+    @include flexbox(space-between);
+  }
+
+  &-title {
+    @extend %base-title;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+// Текст з погляду
+.view-title {
+  @extend %base-subtitle;
+  font-size: 16px;
+}
+
+// Карти
+.cards {
+  @include flexbox(space-between);
+}
+
+// Карта
+.card {
+  @include flexbox(column);
+  width: 370px;
+  height: 500px;
+
+  &-title {
+    @include flexbox(space-between);
+  }
+
+  &__subtitle {
+    @extend %base-subtitle;
+    font-size: 12px;
+  }
+
+  &__title {
+    @extend %base-title;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    line-height: 36px;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.05em;
+  }
+}
