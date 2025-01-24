@@ -1,0 +1,5 @@
+  
+  @mixin container-padding($width: $adaptive_width_container) {
+    padding: 0 calc(50vw - $width);
+  }
+  
