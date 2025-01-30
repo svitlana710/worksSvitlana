@@ -1,0 +1,33 @@
+@mixin contacts-container($width, $height, $margin, $display, $justify-content, $align-items, $border-top, $margin-top) {
+    width: $width;
+    height: $height;
+    margin: $margin;
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    border-top: $border-top;
+    margin-top: $margin-top;
+}
+
+@mixin contacts-span($font-size) {
+    font-size: $font-size;
+}
+
+@mixin contacts-title($font-family, $font-size, $font-weight, $line-height, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin contacts-text($font-family, $font-size, $font-weight, $line-height, $color, $width) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+    width: $width;
+}
+
+
