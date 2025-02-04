@@ -5,52 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXAM</title>
     <link rel="stylesheet" href="./css/styledark.css">
+    <link rel="canonical" href="https://www.examsvitlana.com/">
+    <meta name="description" content="This is an Exam from Svitlana">
     <link rel="icon" href="./assets/img/Union.svg" type="image/x-icon">
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="This is a description of your page.">
+    <meta property="og:url" content="https://www.examsvitlana.com/">
+    <meta property="og:image" content="https://www.examsvitlana.com/image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Your Site Name">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Page Title">
+    <meta name="twitter:description" content="This is a description of your page.">
+    <meta name="twitter:url" content="https://www.examsvitlana.com/">
+    <meta name="twitter:image" content="https://www.examsvitlana.com/image.jpg">
+    <meta name="twitter:site" content="@yourusername">
+    <meta name="robots" content="index, follow">
+
 </head>
 <body>
   <header class="header">
     <div class="header__blur"></div>
     <div class="header__container">
         <div class="header__logo">
-            <svg width="107" height="32">
-                <use xlink:href="./assets/img/sprite.svg#logo"></use>
-            </svg>
+          <svg width="107" height="32">
+            <use xlink:href="./assets/img/sprite.svg#logo"></use>
+        </svg>
         </div>
         <nav class="header__nav">
           <input type="checkbox" class="nav__burger burger" id="nav-burger">
           <label for="nav-burger" class="burger__img"></label>
           <ul class="header__ul">
               <li class="header__list">
-                  <a href="./index.html" class="header__link">Home</a>
+                  <a href="./dark.html" target="_blank" class="header__link">Dark</a>
               </li>
               <li class="header__list">
-                  <a href="#" class="header__link">About</a>
+                  <a href="#about" class="header__link">About</a>
               </li>
               <li class="header__list">
-                  <a href="#" class="header__link">Products</a>
+                  <a href="#products" class="header__link">Products</a>
               </li>
               <li class="header__list">
-                  <a href="#" class="header__link">Use Cases</a>
+                  <a href="#use" class="header__link">Use Cases</a>
               </li>
               <li class="header__list">
-                  <a href="#" class="header__link">Pricing</a>
+                  <a href="#prices" class="header__link">Pricing</a>
               </li>
               <li class="header__list">
-                  <a href="#" class="header__link">Resources</a>
+                  <a href="#resources" class="header__link">Resources</a>
               </li>
           </ul>
       </nav>
       
     </div>
 </header>
-
-
     <main>
         <section class="banner">
-            <article class="banner__article">
-                <h2 class="banner__title">  A peer-to-peer stablecoin <span class="span">clearinghouse</span> for the new economy</h2>
+            <article class="banner__article" id="about">
+                <h1 class="banner__title">  A peer-to-peer stablecoin <span class="span">clearinghouse</span> for the new economy</h1>
                 <p class="banner__text">We are bringing real solutions to the payments world by leveraging public blockchains.</p>
-                <button class="btn">JOIN NOW  <div class="btn__bg"></div></button>
+                <div class="btn-container">
+                  <button class="btn">JOIN NOW</button>
+                  <div class="btn__bg"></div>
+                </div>
+                
             </article>
         </section>
         <section class="info">
@@ -80,12 +98,15 @@
                     <br><br>
                     The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility which are currently preventing the stablecoin market from reaching critical mass.
                   </p>
-                  <button class="btn">CONTACT SALES <div class="btn__bg"></div></button>
+                  <div class="btn-container">
+                    <button class="btn">CONTACTS SALES</button>
+                    <div class="btn__bg"></div>
+                  </div>
                 </div>
               </article>
             </div>
           </section>
-          <section class="benefits">
+          <section class="benefits" id="products">
                 <article class="benefits__article">
                     <h2 class="benefits__title">Qualified <span class="span">traders</span> and <span class="span">liquidty</span> solutions
                     </h2>
@@ -109,19 +130,19 @@
           </section>
           <section class="quote">
             <article class="quote__article">
-                 <img src="./assets/img/img-8.png" alt="icon" class="quote__icon">
+                 <img src="./assets/img/quote-icon.svg" alt="icon" class="quote__icon">
                 <p class="quote__text">Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over access and liquidity</p>
                 <p class="quote__author">Lennon Burnett, Solis Group CEO</p>
             </article>
           </section>
           <section class="video">
            <div class="video__tablet">
-            <img src="./assets/img/img-3.png" alt="">
+            <img src="./assets/img/img-3.png" alt="img3">
             <div class="video__play">
-            <svg width="120" height="120">
-                <use xlink:href="./assets/img/sprite.svg#play"></use>
-            </svg>
-        </div>
+              <svg width="120" height="120">
+                  <use xlink:href="./assets/img/sprite.svg#play"></use>
+              </svg>
+              </div>
             <div class="circle"></div>
            </div>
            <article class="video__article">
@@ -129,7 +150,7 @@
             <p class="video__text">Our API allows all members to interact with Stablehouse’s platform, from effecting transfers to deposits, withdrawals, creation and redemption and reporting.</p>
            </article>
           </section>
-          <section class="promises">
+          <section class="promises" id="use">
             <div class="promises__block"></div>
             <div class="promises__block">
                 <article class="promises__article">
@@ -148,12 +169,15 @@
                         <h2 class="promises__title">Time Settlement Swaps</h2>
                         <p class="promises__text">LBTC / Lightning and other sidechain swaps</p>
                     </div>
-                    <button class="btn">JOIN NOW <div class="btn__bg"></div></button>
+                    <div class="btn-container">
+                      <button class="btn">JOIN NOW</button>
+                      <div class="btn__bg"></div>
+                    </div>
                     </div>
                 </article>
             </div>
           </section>
-          <section class="reviews">
+          <section class="reviews" id="prices">
             <h2 class="reviews__title">Client  <span class="span">reviews</span></h2>
             <h3 class="reviews__subtitle">Happy clients, happy us. Read our client reviews about the work process and results.</h3>
             <div class="reviews__cards">
@@ -168,10 +192,9 @@
                 <article class="reviews__article">
                     <p class="reviews__text">I can’t say enough about how knowledgeable Toinette Rorie is in the area of Web Development. She indeed is a developer and can build a site from scratch. She understands functionality and is great at constructing a site that is robust and fully functioning.  </p>
                     <p class="reviews__p">Elvis Mooney</p>
-                </article>
-            </div>
+                </article>            </div>
           </section>
-          <section class="contacts">
+          <section class="contacts" id="resources">
             <article class="contacts__article">
                 <h2 class="contacts__title">Contact  <span class="span">our sales team</span></h2>
                 <p class="contacts__text">Our team is happy to answer your sales questions. Fill out the form and we’ll be in touch as soon as possible.</p>
@@ -183,7 +206,10 @@
                 <div class="form__divider"></div>
                 <input type="text" required placeholder="Tell more" id="more" class="input">
                 <div class="form__divider"></div>
-                <button class="btn" type="submit">SEND REQUEST    <div class="btn__bg"></div></button>
+                <div class="btn-container">
+                  <button class="btn">SEND REQUEST</button>
+                  <div class="btn__bg"></div>
+                </div>
             </form>
           </section>
     </main>
