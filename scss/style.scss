@@ -205,45 +205,48 @@ body{
     color: #85BBB1;
   }
 
-.btn{
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.08em;
-    margin-top: 50px;
-    background: none;
-    border: none;
-    color: #F1897B;
-
-    &__bg{
-        position: absolute;
-        width: 112px;
-        height: 13px;
-        background-color: #F1897B;
-        opacity: 30%;
-        top: 728px;
-        margin-left: 10px;
-
-        &:nth-child(2){
-            bottom: 1000px;
-            background-color: green;
-        }
-    }
-
-     &:hover, .btn__bg{
+  .btn-container {
+    position: relative;
+    display: inline-block;
+  
+    .btn {
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+      margin-top: 50px;
+      background: none;
+      border: none;
+      color: #F1897B;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s;
+  
+      &:hover {
         color: #E54F3A;
         cursor: pointer;
-        transition: all ease-in .3s;
-
-        .btn__bg {
-            background-color: #E54F3A; 
-
-          }
+      }
     }
-
-    
-}
+  
+    .btn__bg {
+      position: absolute;
+      width: 112px;
+      height: 13px;
+      background-color: #F1897B;
+      opacity: 30%;
+      top: 62px; 
+      left: 15px; 
+      z-index: 0;
+      transition: background-color 0.3s;
+    }
+  
+    .btn:hover + .btn__bg {
+      background-color: #E54F3A;
+    }
+  }
+  
+  
 .info {
     width: 1170px;
     height: 670px;
@@ -323,8 +326,9 @@ body{
     }
 
     .btn__bg{
-        top: calc(100% - 187px);
-        width: 172px;
+        top: calc(100% - 10px);
+        left: 20px;
+        width: 182px;
     }
   }
 .benefits{
@@ -516,7 +520,6 @@ body{
     line-height: 20px;
     letter-spacing: 0.08em;
     margin-top: 50px;
-    background: white;
     border: 1px solid #E4E4E4;
     color: #F1897B;
 
@@ -525,10 +528,9 @@ body{
         width: 112px;
         height: 13px;
         background-color: #F1897B;
-        opacity: 30%;
-        top: calc(100% - 138px); 
-        margin-left: 95px;  
-
+        opacity: 30%; 
+        top: 95px; 
+        left: 100px;
     }
 
      &:hover, .btn__bg{
@@ -644,13 +646,11 @@ body{
     .btn{
         position: absolute;
         margin-right: 290px;
-        top: 5445px;
     }
 
     .btn__bg{
         position: absolute;
         width: 163px;
-        top: 13px;
     }
 
     &__divider{
@@ -731,6 +731,14 @@ body{
 
     .header{
         max-width: 768px;
+
+        &__nav{
+            width: 100px;
+        }
+
+        &__container, &__blur{
+            width: 768px;
+        }
     }
     .banner {
         width: 768px;
@@ -748,6 +756,7 @@ body{
 }
 
     .info {
+        width: 768px;
         margin: 0;
         top: 700px;
 
@@ -801,6 +810,7 @@ body{
     }
 
     .benefits{
+        width: 768px;
         margin-top: 700px;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -835,6 +845,7 @@ body{
         }
     }
     .promises{
+        width: 768px;
         flex-direction: column;
 
         &__article{
@@ -857,9 +868,11 @@ body{
         
         .btn__bg{
             top: 288px;
+            right: 80px;
         }
     }
     .reviews{
+        width: 768px;
        margin-top: 0;
 
        &__cards{
@@ -893,9 +906,440 @@ body{
         .btn{
             top: 6400px;
             width: 180px;
+
+            &__bg{
+                top: 6464px;
+            }
         }
     }
     .footer{
         width: 768px;
     }
+    .input{
+        width: 200px;
+    }
 }
+@media screen and (max-width: 320px) {
+    .header {
+      top: 10px;
+      
+      &__logo {
+        margin-top: 20px;
+      }
+  
+      &__container {
+        width: 90%;
+      }
+  
+      &__nav {
+        margin-top: 10px;
+      }
+  
+      &__ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+  
+      &__list {
+        padding: 5px 0;
+      }
+  
+      &__blur {
+        width: 100%;
+      }
+    }
+  
+    .banner {
+        width: 320px;
+      height: auto;
+      padding: 20px;
+  
+      &__article {
+        margin-top: 50px;
+        margin-left: 0;
+        width: 320px;
+      }
+  
+      &__title {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        width: 320px;
+      }
+  
+      &__text {
+        width: 100%;
+        text-align: center;
+      }
+  
+      .span {
+        font-size: 24px;
+        line-height: 32px;
+      }
+  
+      .btn {
+        font-size: 16px;
+        margin-top: 20px;
+        
+        &__bg {
+          width: 100px;
+          height: 10px;
+          top: 350px;
+        }
+      }
+    }
+  
+    .info {
+      width: 100%;
+      height: auto;
+      margin-left: 0;  
+      top: 350px;
+      padding: 20px;
+  
+      &__img {
+
+        & img{
+            width: 320px;
+        }
+      }
+  
+      &__block {
+        width: 100%;
+        height: auto;
+      }
+  
+      &__article {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        flex-direction: column;
+      }
+  
+      &__items {
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+      }
+  
+      &__item {
+        width: 100%;
+      }
+  
+      &__title {
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+      
+    }
+  
+      &__subtitle {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+      }
+  
+      &__text {
+        text-align: center;
+      }
+  
+      &__divider {
+        width: 100%;
+      }
+  
+      .btn__bg {
+        top: calc(100% - 30px);
+        width: 190px;
+      }
+    }
+  
+    .benefits {
+      width: 100%;
+      height: auto;
+      margin-top: 640px;
+      flex-direction: column;
+      align-items: center;
+  
+      &__article {
+        width: 90%;
+        height: auto;
+        border-top: 1px solid #E4E4E4;
+        margin-top: 20px;
+      }
+  
+      &__title{
+        font-size: 24px;
+      }
+      &__title,
+      &__text {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+      }
+  
+      .span {
+        font-size: 24px;
+      }
+    }
+  
+    .quote {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      background-size: cover;
+      padding: 20px;
+  
+      &__article {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        text-align: center;
+      }
+  
+      &__text {
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+      }
+  
+      &__author {
+        font-size: 16px;
+      }
+  
+      &__icon {
+        left: 50px;
+        top: 2850px;
+      }
+    }
+  
+    .video {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+  
+      &__tablet {
+        width: 320px;
+        height: 180px;
+        border-radius: 10px;
+  
+        & img {
+          width: 250px;
+          margin-left: 20px;
+          height: auto;
+        }
+      }
+  
+      &__play {
+        width: 40px; 
+
+        & svg{
+            width: 50px;
+        }
+      }
+  
+      &__title{
+        font-size: 24px;
+      }
+
+      &__text{
+        font-size: 16px;
+      }
+      &__title,
+      &__text {
+        width: 100%;
+        text-align: center;
+      }
+  
+      .span {
+        font-size: 24px;
+      }
+  
+      .circle {
+        width: 20px;
+        height: 20px;
+        margin-left: 470px;
+      }
+    }
+  
+    .promises {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+  
+      &__block {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+  
+        &:nth-child(1) {
+          width: 100%;
+        }
+      }
+  
+
+      &__title{
+        font-size: 20px;
+      }
+
+      &__text{
+        font-size: 16px;
+      }
+      &__article {
+        width: 320px;
+        margin-left: 0;
+        text-align: center;
+        top: 3700px;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+  
+      &__items {
+        width: 320px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-left: 0;
+      }
+  
+      &__item {
+        width: 100%;
+        margin-top: 20px;
+      }
+  
+      .btn {
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+
+        &__bg{
+            top: 425px;
+        }
+      }
+    }
+  
+    .reviews {
+      width: 100%;
+      height: auto;
+      margin-top: 400px;
+  
+      &__title {
+        font-size: 24px;
+        text-align: center;
+      }
+  
+      .span {
+        font-size: 24px;
+      }
+  
+      &__subtitle {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+      }
+  
+      &__cards {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+      }
+  
+      &__article {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      &__p {
+        font-size: 16px;
+        margin-right: 0;
+      }
+  
+      &__text {
+        width: 100%;
+      }
+    }
+  
+    .contacts {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+  
+      &__title,
+      &__text {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    .form {
+      width: 100%;
+      height: auto;
+      gap: 20px;
+      margin-top: 20px;
+  
+      .btn {
+        position: relative;
+        margin-right: 0;
+        top: auto;
+      }
+  
+      .btn__bg {
+        position: relative;
+        width: 200px;
+        top: 1px;
+      }
+  
+      &__divider {
+        width: 320px;
+        height: 1px;
+        position: absolute;
+        top: 5740px;
+
+        &:nth-child(2){
+            top: 5840px;
+            height: 1.5px;
+        }
+        &:nth-child(4){
+            top: 5790px;
+        }
+      }
+    }
+  
+    .input {
+      width: 320px;
+    }
+  
+    .footer {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      padding: 20px;
+  
+      &__text,
+      &__p {
+        text-align: center;
+      }
+  
+      & div {
+        width: 100%;
+        justify-content: center;
+  
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  
