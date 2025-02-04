@@ -1,0 +1,16 @@
+
+@mixin flex-container($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font-styles($font-family, $font-size, $font-weight, $line-height, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+
